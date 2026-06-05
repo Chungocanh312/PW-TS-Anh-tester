@@ -244,6 +244,7 @@ test("Web first assertion - toBeEmpty", async ({ page }) => {
 
 //toHaveCount:
 // Kiểm tra 1 element có chứa chính xác bao nhiêu phần tử bên trong đó (Bên trong 1 list)
+// Lưu ý đây là đếm số thẻ con trong 1 thẻ cha, chứ không dùng để đếm số phần từ trong 1 array
 test("Web first assertion - toHaveCount", async ({ page }) => {
   await page.goto("https://demoapp-sable-gamma.vercel.app/");
   await page.getByRole("link", { name: "Bài 1: Auto-Wait Demo" }).click();
